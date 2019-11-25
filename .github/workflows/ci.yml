@@ -1,0 +1,21 @@
+name: GitHub Actions
+on: [push]
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Install Rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        override: true
+        profile: minimal
+
+    - name: Run cargo fmt
+      run: cargo fmt --all -- --check
+
+    - name: Run cargo test
+      run: cargo test --lib --verbose

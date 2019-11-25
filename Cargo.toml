@@ -1,0 +1,33 @@
+[package]
+name = "block_kit"
+edition = "2018"
+version = "0.1.0"
+authors = ["horita-yuya <horitayuya@gmail.com>"]
+description = "Simple wrapper for slack api"
+license = "Apache-2.0"
+repository = "https://github.com/horita-yuya/rust_block_kit"
+homepage = "https://github.com/horita-yuya"
+readme = "README.md"
+keywords = ["slack"]
+
+include = [
+  "Cargo.toml",
+  "LICENSE",
+  "src/**/*"
+]
+
+[dependencies]
+serde = { version = "1.0.103", features = ["derive"] }
+
+[dev-dependencies]
+envy = "0.4.0"
+log = "0.4.8"
+env_logger = "0.7.1"
+futures = "0.3.1"
+serde_json = "1.0.44"
+#reqwest = { version = "0.10.0-alpha.2", features = ["json"] }
+serde_urlencoded = "0.6.1"
+actix = "0.8.3"
+actix-rt = "1.0.0"
+actix-web = { version = "2.0.0-alpha.4", features = ["openssl", "client"] }
+tokio = { version = "0.2.4", features = ["full"] }
