@@ -1,6 +1,7 @@
 # block_kit
 
 [![Actions Status](https://github.com/horita-yuya/rust-slack/workflows/GitHub%20Actions/badge.svg)](https://github.com/horita-yuya/rust-slack/actions)
+[![crate-name at crates.io](https://img.shields.io/crates/v/block_kit.svg)](https://crates.io/crates/block_kit)
 
 Simple wrapper for Slack API, Block Kit and Payloads for Slach Commands and Interactive Components.
 Implemented using [serde](https://github.com/serde-rs/serde)
@@ -12,15 +13,10 @@ Implemented using [serde](https://github.com/serde-rs/serde)
 [sample](./examples/interactive_server/main.rs)
 
 #### other samples
-- [request](./examples/simple_request/main.rs)
-- [serialize](./examples/simple_serialize/main.rs)
+- [simple_request](./examples/simple_request/main.rs)
+- [simple_serialize](./examples/simple_serialize/main.rs)
 
 ## Basic
- 
-### Dependencies 
-- [serde_json](https://github.com/serde-rs/json)
-- [serde_urlencoded](https://github.com/nox/serde_urlencoded)
-- [envy](https://github.com/softprops/envy)
 
 ### 1. load env 
 ```rust
