@@ -87,8 +87,8 @@ The number of elements it can have depends on the type of block. For example,
 - **Section**: some **Texts** in `text` and `fields`.
 - **Divider**: cannot have.
 
-**Block Element** is a visual smaller component.
-Elements can be used inside of `section`, `context`, `actioons` block.
+**Block Element** is a smaller visual component.
+Elements can be used inside of `section`, `context`, `actions` block.
 They constitutes a part of **Block**. Element may have some **Composition Objects**.
 
 **Composition Object** is also a visual component, but is smaller than **Block Element**.
