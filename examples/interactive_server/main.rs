@@ -86,6 +86,6 @@ async fn main() -> io::Result<()> {
     })
     .bind("localhost:8000")
     .unwrap()
-    .start()
+    .run()
     .await
 }
