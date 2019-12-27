@@ -1,10 +1,12 @@
-use crate::block::Block::{Actions, Context, Divider, Image, Section};
+use crate::block::input::InputBlock;
+use crate::block::Block::{Actions, Context, Divider, Image, Input, Section};
 use serde::Serialize;
 
 pub mod actions;
 pub mod context;
 pub mod divider;
 pub mod image;
+pub mod input;
 pub mod section;
 
 pub(self) const SECTION_TYPE: &str = "section";
@@ -12,6 +14,7 @@ pub(self) const ACTIONS_TYPE: &str = "actions";
 pub(self) const CONTEXT_TYPE: &str = "context";
 pub(self) const DIVIDER_TYPE: &str = "divider";
 pub(self) const IMAGE_TYPE: &str = "image";
+pub(self) const INPUT_TYPE: &str = "input";
 
 /// Blocks are a series of components that can be combined to create visually rich and compellingly interactive messages.
 ///
@@ -31,9 +34,9 @@ pub enum Block {
     Actions(actions::ActionsBlock),
     Image(image::ImageBlock),
     Context(context::ContextBlock),
+    Input(input::InputBlock),
     /*    TODO:
-     *    File,
-     *    Input, */
+     *    File   */
 }
 
 impl From<section::SectionBlock> for Block {
@@ -63,6 +66,12 @@ impl From<image::ImageBlock> for Block {
 impl From<context::ContextBlock> for Block {
     fn from(block: context::ContextBlock) -> Self {
         Context(block)
+    }
+}
+
+impl From<input::InputBlock> for Block {
+    fn from(block: InputBlock) -> Self {
+        Input(block)
     }
 }
 
